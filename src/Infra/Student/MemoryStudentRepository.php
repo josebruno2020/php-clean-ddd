@@ -5,6 +5,7 @@ namespace Alura\Clean\Infra\Student;
 
 use Alura\Clean\Domain\Cpf;
 use Alura\Clean\Domain\Student\Student;
+use Alura\Clean\Domain\Student\StudentNotFound;
 use Alura\Clean\Domain\Student\StudentRepository;
 
 class MemoryStudentRepository implements StudentRepository
@@ -21,7 +22,7 @@ class MemoryStudentRepository implements StudentRepository
         $filter =  array_filter($this->students, fn (Student $student) => $student->cpf() === (string) $cpf);
 
         if (count($filter) === 0) {
-            throw new \Exception('Aluno não encontrado');
+            throw new StudentNotFound('Aluno não encontrado');
         }
 
         return $filter[0];
