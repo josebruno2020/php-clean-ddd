@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Clean;
+namespace Alura\Clean\Test;
 
 use PHPUnit\Framework\TestCase;
 

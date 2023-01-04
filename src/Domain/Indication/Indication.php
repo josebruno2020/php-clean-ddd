@@ -1,8 +1,7 @@
 <?php
 
-namespace Alura\Clean\Indication;
+namespace Alura\Clean\Domain\Indication;
 
-use Alura\Clean\Student\Student;
 use DateTimeImmutable;
 
 class Indication

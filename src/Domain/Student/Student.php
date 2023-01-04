@@ -1,5 +1,5 @@
 <?php
-namespace Alura\Clean\Student;
+namespace Alura\Clean\Domain\Student;
 
 use Alura\Clean\Cpf;
 use Alura\Clean\Email;

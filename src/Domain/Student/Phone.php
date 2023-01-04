@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Clean\Student;
+namespace Alura\Clean\Domain\Student;
 
 use InvalidArgumentException;
 use JsonSerializable;
