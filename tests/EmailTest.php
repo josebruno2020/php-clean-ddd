@@ -2,6 +2,7 @@
 
 namespace Alura\Clean\Test;
 
+use Alura\Clean\Domain\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

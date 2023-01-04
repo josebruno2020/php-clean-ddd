@@ -2,6 +2,7 @@
 
 namespace Alura\Clean\Domain\Indication;
 
+use Alura\Clean\Domain\Student\Student;
 use DateTimeImmutable;
 
 class Indication

@@ -2,6 +2,7 @@
 
 namespace Alura\Clean\Test;
 
+use Alura\Clean\Domain\Student\Phone;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
