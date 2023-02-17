@@ -22,6 +22,7 @@ class Student implements JsonSerializable
         $this->cpf = $cpf;
         $this->name = $name;
         $this->email = $email;
+        $this->phones = [];
     }
 
     public static function makeStudent(string $cpf, string $email, string $name): self

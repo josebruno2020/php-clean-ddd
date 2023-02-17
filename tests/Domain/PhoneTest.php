@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Clean\Test;
+namespace Alura\Clean\Test\Domain;
 
 use Alura\Clean\Domain\Student\Phone;
 use InvalidArgumentException;
