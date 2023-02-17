@@ -18,7 +18,7 @@ class StudentRepositoryTest extends TestCase
 
     public function testAddStudentInMemorySuccessfully()
     {
-        $student = Student::makeStudent('1182433901', 'test@email.com', 'Student Test');
+        $student = Student::makeStudent('118.243.390-01', 'test@email.com', 'Student Test');
         $this->repository->add($student);
         $this->assertCount(1, $this->repository->findAll());
     }

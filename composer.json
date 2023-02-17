@@ -4,6 +4,7 @@
       "Alura\\Clean\\": "src/",
       "Alura\\Clean\\Domain\\": "src/Domain/",
       "Alura\\Clean\\Infra\\": "src/Infra/",
+      "Alura\\Clean\\App\\": "src/App/",
       "Alura\\Clean\\Test\\": "tests/"
     }
   },
@@ -19,7 +20,8 @@
   ],
   "require": {
     "ext-pdo": "*",
-    "php": "^8.0"
+    "php": "^8.0",
+    "phpmailer/phpmailer": "^6.7"
   },
   "scripts": {
     "test": "php vendor/bin/phpunit tests"

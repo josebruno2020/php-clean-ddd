@@ -69,7 +69,28 @@ class PdoStudentRepository implements StudentRepository
 
     public function findAll(): array
     {
-        // TODO
-        return [];
+        $sql = '
+            SELECT cpf, nome, email, ddd, numero as numero_telefone
+              FROM alunos
+         LEFT JOIN telefones ON telefones.cpf_aluno = alunos.cpf;
+        ';
+        $stmt = $this->connection->query($sql);
+
+        $listStudents = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $students = [];
+
+        foreach ($listStudents as $data) {
+            if (!array_key_exists($data['cpf'], $students)) {
+                $students[$data['cpf']] = Student::makeStudent(
+                    $data['cpf'],
+                    $data['email'],
+                    $data['nome']
+                );
+            }
+
+            $students[$data['cpf']]->adicionarTelefone($data['ddd'], $data['numero_telefone']);
+        }
+
+        return array_values($students);
     }
 }
